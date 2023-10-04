@@ -28,4 +28,12 @@ def trace_route():
             print(f"Error at {i} hops: {e}")
 trace_route()
 
+#creating main function 
+def main():
+    ''' will do the iterations after which we get the unique ip addresses'''
+    #to be completed
+    return None
+main()
+
+
 
