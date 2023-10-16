@@ -40,12 +40,5 @@ def main():
 main()
             
 
-#creating main function 
-def main():
-    ''' will do the iterations after which we get the unique ip addresses'''
-    #to be completed
-    return None
-main()
-
 
 
