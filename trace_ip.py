@@ -1,44 +1,38 @@
 from scapy.all import *
 
-ipaddr = "10.199.0.0"  # private ip # possible ips to ping  # 138.238.3.33  # 10.26.96.1 # 66.44.94.195
+unique_ip = set()
+ipaddr="10.199.0.0"  # change subnet accordingly 
 def trace_route(ipaddr):
-    print('ipaddr is',ipaddr)
+    # print('Tracing route to', ipaddr)
+    f = open("UglSubnet199/ugl_sn199.txt","a") # change accordingly
     for i in range(1, 28):
         pkt = IP(dst=ipaddr, ttl=i) / UDP(dport=33434)
-        try:
-            # Send the packet and get a reply
-            reply = sr1(pkt, verbose=0, timeout=3)
+        # print(pkt)
+        reply = sr1(pkt, verbose=0, timeout=3)
+        try: 
             if reply is None:
-                # No reply, consider increasing the timeout if this happens too frequently
-                with open("lkd.txt","a") as f:
-                    f.append(f"Time out at {i} hops away.")
-                print(f"Time out at {i} hops away.")
+                f.write(f"Time out at {i} hops away for {ipaddr}.\n")
+                print(f"Time out at {i} hops away for {ipaddr}.")
                 break
             elif reply.type == 3:
-                # We've reached our destination
-                with open("lkd.txt","a") as f:
-                    f.append(f"Time out at {i} hops away.")
-                print("Done!", reply.src)
+                f.write(f"Destination {ipaddr} reached in {i} hops. Source: {reply.src}\n")
+                print(f"Destination {ipaddr} reached in {i} hops. Source: {reply.src}")
                 break
-
             else:
-                # We're in the middle somewhere
-                with open("lkd.txt","a") as f: # change the txt files accordingly 
-                    f.append(f"{i} hops away: {reply.src} ")
+                f.write(f"{i} hops away: {reply.src} \n")
                 print(f"{i} hops away: ", reply.src)
+                unique_ip.add(reply.src)
         except Exception as e:
-            with open("lkd.txt","a") as f:
-                    f.append(f"Error at {i} hops: {e}")
-                    
-            print(f"Error at {i} hops: {e}")
-# trace_route(ipaddr)
-
+            print(f"Error at {i} hops : {e}\n")
+    print(" ============== ")
+    f.write("===============\n")
+    print()
+    f.close()
+    
 def main():
-    for i in range(1,256):
-        for j in range(1,256): # can skip by 16 
-            trace_route(f"10.199.{i}.{j}")      # change ipaddr prefix accordingly   
+        for i in range(1, 256):
+            for j in range(1, 256):  
+                trace_route(f"10.199.{i}.{j}") # change the subnet accordingly 
+                with open("UglSubnet199/unique_ip_uglsn199.txt","a") as f:  # create the different folder  
+                    f.write(f"routes : {unique_ip}\n") 
 main()
-            
-
-
-
