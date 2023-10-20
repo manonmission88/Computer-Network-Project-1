@@ -1,2 +1,2 @@
 # Building Network Topology
-![Network Topology](ugl_upto_26_22_92.png)
+![Network Topology](stokes_library_10.199.png)
