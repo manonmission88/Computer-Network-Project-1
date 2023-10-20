@@ -30,7 +30,7 @@ def trace_route(ipaddr):
     f.close()
     
 def main():
-        for i in range(1, 256):
+        for i in range(5, 256):
             for j in range(1, 256):  
                 trace_route(f"10.199.{i}.{j}") # change the subnet accordingly 
                 with open("UglSubnet199/unique_ip_uglsn199.txt","a") as f:  # create the different folder  
