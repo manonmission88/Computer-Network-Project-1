@@ -36,7 +36,7 @@ def trace_route(ipaddr):
 # trace_route(ipaddr)
 
 def main():
-    for i in range(1,256):
+    for i in range(7,256):
         for j in range(1,256): # can skip by 16 
             with open("location_ilab.txt","a") as f:
                     f.write(f"For traceroute: 10.26.{i}.{j}\n")
