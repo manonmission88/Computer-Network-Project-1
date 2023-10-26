@@ -14,6 +14,7 @@ This folder contains the python3 script used for the project.
 This folder contains the traceroute Data collected from Howard University.
 
 ## Topology
-### all - Folder for the final topology result.
-#### all.txt - Because of its large size, this file has been pushed into multiple files, like all1.txt, all2.txt.
+### Final - Folder for the final topology result.
+This folder contains the all.txt file which contains all the data collected. Because of its large size, it has not been included here.
+
 
