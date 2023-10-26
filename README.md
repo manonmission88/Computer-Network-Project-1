@@ -31,6 +31,12 @@ This folder contains the traceroute Data collected from Howard University.
 * UglSubnet199(folder for 10.199 prefix)
 
 ## Topology
+### Pradeep/Subs
+* 10.53 and 10.29
+* 53.29.199
+* 53.29.199.26
+
+
 ### Prem
 * all
 * old
