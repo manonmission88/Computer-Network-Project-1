@@ -2,7 +2,38 @@
 Please read below to find all the final works.
 
 ## Submission
-This folder contains all the pdf files for the Project
+This folder contains all the pdf files for the Project.
+
+## Data
+This folder contains the traceroute Data collected from Howard University.
+### Prem
+* 10.127 (folder for 10.127 prefix)
+* 10.26 (folder for 10.26 prefix)
+* 138.238 (folder for 138.238 prefix)
+* Subnets (folder for prefix - 10.1 / 10.3 / 10.7 / 10.8 / 10.99 / 10.24
+
+### Pradeep
+* ChemSubnet116 (folder for 10.116 prefix)
+* 10.29.txt (folder for 10.29 prefix)
+* 10.53.txt (folder for 10.53 prefix)
+* UglSubnet199(folder for 10.199 prefix)
+
+### Sanjay
+* iLab - subnet 10.26
+* iLab - subnet 10.78
+* iLab - subnet 10.199
+
+### Ujjwal
+* Chemistry Building - subnet 10.199
+* Stokes Library - subnet 10.199
+* Stokes Library - subnet 10.77
+* 
+### Manish
+* uglsubne - subnet 10.26
+* mackey - subnet 10.199
+* mackey - subnet 10.26
+* lkdd - subnet 10.199
+  
 ## Code
 This folder contains the python3 script used for the project.
 ### Prem
@@ -36,36 +67,6 @@ This folder contains the python3 script used for the project.
 * topology_create.py
 * netw.py
 * starter.py
-  
-## Data
-This folder contains the traceroute Data collected from Howard University.
-### Prem
-* 10.127 (folder for 10.127 prefix)
-* 10.26 (folder for 10.26 prefix)
-* 138.238 (folder for 138.238 prefix)
-* Subnets (folder for prefix - 10.1 / 10.3 / 10.7 / 10.8 / 10.99 / 10.24
-
-### Pradeep
-* ChemSubnet116 (folder for 10.116 prefix)
-* 10.29.txt (folder for 10.29 prefix)
-* 10.53.txt (folder for 10.53 prefix)
-* UglSubnet199(folder for 10.199 prefix)
-
-### Sanjay
-* iLab - subnet 10.26
-* iLab - subnet 10.78
-* iLab - subnet 10.199
-
-### Ujjwal
-* Chemistry Building - subnet 10.199
-* Stokes Library - subnet 10.199
-* Stokes Library - subnet 10.77
-* 
-### Manish
-* uglsubne - subnet 10.26
-* mackey - subnet 10.199
-* mackey - subnet 10.26
-* lkdd - subnet 10.199
 
 ## Topology
 ### Pradeep/Subs
