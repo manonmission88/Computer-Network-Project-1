@@ -1,8 +1,6 @@
 # Computer-Network-Project-1
 Please read below to find all the final works.
 
-## Submission
-Folder for PDF files for the project.
 ## Code
 This folder contains the python3 script used for the project.
 ### Prem
@@ -31,6 +29,13 @@ This folder contains the python3 script used for the project.
 * trace_route.py
   The final trace route algorithm
 
+### Ujjwal
+* ChemistryBuildingActiveIPs.py
+* chemistry_building_topology.py
+* topology_create.py
+* netw.py
+* starter.py
+  
 ## Data
 This folder contains the traceroute Data collected from Howard University.
 ### Prem
@@ -50,6 +55,11 @@ This folder contains the traceroute Data collected from Howard University.
 * iLab - subnet 10.78
 * iLab - subnet 10.199
 
+### Ujjwal
+* Chemistry Building - subnet 10.199
+* Stokes Library - subnet 10.199
+* Stokes Library - subnet 10.77
+* 
 ### Manish
 * uglsubne - subnet 10.26
 * mackey - subnet 10.199
