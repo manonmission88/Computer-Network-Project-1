@@ -28,7 +28,7 @@ def create_topology_graph(route):
     return G
 
 # Extract routers from the file
-routers = parse_traceroute_file('/Users/manishnewray/Computer-Network-Project-1-1/Data/Manish/MackeySubnet1/mackey_sn1.txt')
+routers = parse_traceroute_file('/Users/manishnewray/Computer-Network-Project-1-1/Data/Manish/UglSubnet26/ugl_sn26.txt')
 
 # Create a graph topology
 G = create_topology_graph(routers)
@@ -39,11 +39,11 @@ nx.draw(G, pos, with_labels=True, node_size=1500, node_color='lightgreen', font_
 plt.title("Building Network Topology")
 
 # Save the graph as an image
-image_path = "mackey_subnet1.png"
+image_path = "/Users/manishnewray/Computer-Network-Project-1-1/Data/Manish/UglSubnet26/ugl_sn.png"
 plt.savefig(image_path)
 plt.close()
 
-# Write the image reference to a Markdown file
-with open("/Users/manishnewray/Computer-Network-Project-1-1/Data/Manish/MackeySubnet1/mackey_sn1.txt", "w") as md_file:
-    md_file.write("# Building Network Topology\n")
+
+with open("/Users/manishnewray/Computer-Network-Project-1-1/Data/Manish/UglSubnet26/ugl.md", "a") as md_file:
+    md_file.write("Updated Ugl Toplogy Excluding Public")
     md_file.write(f"![Network Topology]({image_path})")
