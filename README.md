@@ -1,6 +1,8 @@
 # Computer-Network-Project-1
 Please read below to find all the final works.
 
+## Submission
+This folder contains all the pdf files for the Project
 ## Code
 This folder contains the python3 script used for the project.
 ### Prem
@@ -15,7 +17,6 @@ This folder contains the python3 script used for the project.
 * trace_ip.py
 * trace_ip_updated.py
 * ugl-sn199_topology.py
-
 
 ### Sanjay
 * topology.py
@@ -65,7 +66,6 @@ This folder contains the traceroute Data collected from Howard University.
 * mackey - subnet 10.199
 * mackey - subnet 10.26
 * lkdd - subnet 10.199
-
 
 ## Topology
 ### Pradeep/Subs
