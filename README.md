@@ -73,14 +73,32 @@ This folder contains the traceroute Data collected from Howard University.
 * Final - This folder is for final topology. This folder contains the all.txt file which contains all the data collected. Because of its large size, it has not been included here. But, the routes.txt which is created by all_active_ips.py script by reading the all.txt file is contained within this folder.
 # Results
 Click the image below or The location of this PNG file is: https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/Final/topology_final.png
-## 10.53 / 10.29
-![10.53 / 10.29](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Pradeep/Subs/10.53%20and%2010.29/10.53-and-10.29.png)
-## 10.53 / 10.29 / 10.199
-![10.53 / 10.29 / 10.199](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Pradeep/Subs/53.29.199.26/53.29.199.26.png)
-## 10.53 / 10.29 / 10.199 / 10.26
-![10.53 / 10.29 / 10.199 / 10.26](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Pradeep/Subs/53.29.199.26/53.29.199.26.png)
-## final
+
+## Prem
+
+### final
 ![Final Topology](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/Final/topology_final.png)
+
+### 10.127
+![](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/fragments/10.127/10.127.png)
+
+### 10.26
+![](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/fragments/10.26/10.26.png)
+
+### 138.238
+![](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/fragments/138.238/138.238.png)
+### 10.127, 10.26 and 138.238
+![](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/fragments/26.127-138.238/26.127-138.238.png)
+
+
+## Pradeep
+### 10.53 / 10.29
+![10.53 / 10.29](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Pradeep/Subs/10.53%20and%2010.29/10.53-and-10.29.png)
+### 10.53 / 10.29 / 10.199
+![10.53 / 10.29 / 10.199](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Pradeep/Subs/53.29.199.26/53.29.199.26.png)
+### 10.53 / 10.29 / 10.199 / 10.26
+![10.53 / 10.29 / 10.199 / 10.26](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Pradeep/Subs/53.29.199.26/53.29.199.26.png)
+
 
 
 
