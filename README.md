@@ -35,7 +35,7 @@ This folder contains the traceroute Data collected from Howard University.
 * all
 * old
 * seeds
-* Final - This folder is for final topology. This folder contains the all.txt file which contains all the data collected. Because of its large size, it has not been included here.
+* Final - This folder is for final topology. This folder contains the all.txt file which contains all the data collected. Because of its large size, it has not been included here. But, the routes.txt which is created by all_active_ips.py script by reading the all.txt file is contained within this folder.
 # Result
 Click the image below or The location of this PNG file is: https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/Final/topology_final.png
 ![Final Topology](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/Final/topology_final.png)
