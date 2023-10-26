@@ -26,7 +26,7 @@ This folder contains the traceroute Data collected from Howard University.
 * Final - This folder is for final topology. This folder contains the all.txt file which contains all the data collected. Because of its large size, it has not been included here.
 
 
-The location of this PNG file is:![[Link Text](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/final.png)
+The location of this PNG file is:![Link Text](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/final.png)
 ![Final Topology](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/final.png)
 
 
