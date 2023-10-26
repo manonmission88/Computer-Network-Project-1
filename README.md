@@ -45,9 +45,9 @@ This folder contains the traceroute Data collected from Howard University.
 * UglSubnet199(folder for 10.199 prefix)
 
 ### Ujjwal
-* ChemSubnet199 (folder for 10.199 prefix)
-* StokesLibrary199 (folder for 10.199 prefix)
-* StokesLibrary77 (folder for 10.77 prefix)
+* ChemBuilding - subnet 10.199 
+* StokesLibrary - subnet 10.199
+* StokesLibrary - subnet 10.77
 * 
 ### Sanjay
 * iLab - subnet 10.26
