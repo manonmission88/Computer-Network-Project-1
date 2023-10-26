@@ -54,27 +54,34 @@ def topology(fname):
     return G
 
 if __name__ == "__main__":
-    
-    G = topology("routes.txt")
-    
-    dict_colors = get_colors(G)
+    try:
+        G = topology("routes.txt")
+        if G is None:
+            print("Failed to create the graph.")
+            exit(1)
+        
+        dict_colors = get_colors(G)
 
-    edge_colors = list(dict_colors.values())
+        edge_colors = list(dict_colors.values())
 
-    plt.figure(figsize=(50, 50))
-    pos = nx.spring_layout(G, seed=0, k=3, scale=5)
-    
-    nx.draw(G, pos, with_labels=False, node_size=1500, node_color=[(245/255.0, 250/255.0, 255/255.0)], edge_color=edge_colors, width=3, arrows=True, arrowsize=25)
+        plt.figure(figsize=(50, 50))
+        pos = nx.spring_layout(G, seed=0, k=3, scale=5)
 
-    for node, (x, y) in pos.items():
-        plt.text(x, y, node, fontsize=30, ha='center', va='center', color='black')
-        #plt.text(x, y, node, fontsize=30, ha='center', va='center', color=font_colors.get(node, 'black'))
+        nx.draw(G, pos, with_labels=False, node_size=1500, node_color=[(245/255.0, 250/255.0, 255/255.0)], edge_color=edge_colors, width=3, arrows=True, arrowsize=25)
 
-    plt.title("Network Topology from Traceroute Data")
-    image_path = f"topology_final.png"
-    plt.savefig(image_path, dpi=300)
-    plt.close()
+        for node, (x, y) in pos.items():
+            plt.text(x, y, node, fontsize=30, ha='center', va='center', color='black')
+            #plt.text(x, y, node, fontsize=30, ha='center', va='center', color=font_colors.get(node, 'black'))
 
-    with open(f"topology_final.md", "w") as md_file:
-        md_file.write("# Building Network Topology\n")
-        md_file.write(f"![Network Topology]({image_path})")
+        plt.title("Network Topology from Traceroute Data")
+        image_path = f"topology_final.png"
+        plt.savefig(image_path, dpi=300)
+        plt.close()
+        
+        with open(f"topology_final.md", "w") as md_file:
+            print("Writing to the Markdown file...")
+            md_file.write("# Building Network Topology\n")
+            md_file.write(f"![Network Topology]({image_path})")
+            print("Successfully written to topology_final.md")
+    except Exception as e:
+        print(f"An error occurred: {e}")
