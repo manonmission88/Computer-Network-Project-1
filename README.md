@@ -1,6 +1,8 @@
 # Computer-Network-Project-1
 Please read below to find all the final works.
 
+## Submission
+Folder for PDF files for the project.
 ## Code
 This folder contains the python3 script used for the project.
 ### Prem
