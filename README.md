@@ -12,6 +12,11 @@ This folder contains the python3 script used for the project.
 
 ## Data
 This folder contains the traceroute Data collected from Howard University.
+### Prem
+* 10.127 (folder for 10.127 prefix)
+* 10.26 (folder for 10.26 prefix)
+* 138.238 (folder for 138.238 prefix)
+* Subnets (folder for prefix - 10.1 / 10.3 / 10.7 / 10.8 / 10.99 / 10.24
 
 ## Topology
 ### Final - Folder for the final topology result.
