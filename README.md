@@ -18,8 +18,7 @@ This folder contains the traceroute Data collected from Howard University.
 * 138.238 (folder for 138.238 prefix)
 * Subnets (folder for prefix - 10.1 / 10.3 / 10.7 / 10.8 / 10.99 / 10.24
 
-## Topology
-### Final - Folder for the final topology result.
+## Topology/Final - Folder for the final topology result.
 This folder contains the all.txt file which contains all the data collected. Because of its large size, it has not been included here.
 
 
