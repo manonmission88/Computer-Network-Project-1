@@ -11,22 +11,21 @@ This folder contains the python3 script used for the project.
 * all_active_ips.py
 
 ### Pradeep
-* ChemistryBuildingActiveIPs.py
-* chemistry_building_topology.py
-* chemistry_building_topology_create.py
-* netw.py
-* starter.py
-
-### Ujjwal
 * chem-sn116_topology.py
 * trace_ip.py
 * trace_ip_updated.py
 * ugl-sn199_topology.py
 
-  
+
 ### Sanjay
 * topology.py
   The final topology creation code
+* trace_route.py
+  The final trace route algorithm
+
+### Manish
+* make_topology.py
+  code for making topology 
 * trace_route.py
   The final trace route algorithm
 
@@ -44,15 +43,16 @@ This folder contains the traceroute Data collected from Howard University.
 * 10.53.txt (folder for 10.53 prefix)
 * UglSubnet199(folder for 10.199 prefix)
 
-### Ujjwal
-* ChemBuilding - subnet 10.199 
-* StokesLibrary - subnet 10.199
-* StokesLibrary - subnet 10.77
-* 
 ### Sanjay
 * iLab - subnet 10.26
 * iLab - subnet 10.78
 * iLab - subnet 10.199
+
+### Manish
+* uglsubne - subnet 10.26
+* mackey - subnet 10.199
+* mackey - subnet 10.26
+* lkdd - subnet 10.199
 
 
 ## Topology
@@ -74,10 +74,13 @@ This folder contains the traceroute Data collected from Howard University.
 # Results
 Click the image below or The location of this PNG file is: https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/Final/topology_final.png
 
-## Prem
+
 
 ### final
 ![Final Topology](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/Final/topology_final.png)
+
+
+## Prem
 
 ### 10.127
 ![](https://github.com/manonmission88/Computer-Network-Project-1/blob/main/Topology/Prem/fragments/10.127/10.127.png)
