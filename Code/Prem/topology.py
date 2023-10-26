@@ -1,54 +1,80 @@
 import networkx as nx
-from networkx.drawing.nx_agraph import graphviz_layout
 import matplotlib.pyplot as plt
-from scapy.all import traceroute, IP, UDP, sr1
-from random import randint
-import os
 import ast
+import itertools
 
 '''
 This python Script: 
 reads routes.txt and creates a topology
 '''
 
+def get_colors(G):
+    node_colors = {}
+    color_iter = [(0/255.0, 0/255.0, 255/255.0), (255/255.0, 0/255.0, 0/255.0), (0/255.0, 255/255.0, 0/255.0), (255/255.0, 0/255.0, 255/255.0), (0/255.0, 255/255.0, 255/255.0), (127/255.0, 0/255.0, 255/255.0), (127/255.0, 0/255.0, 255/255.0), (255/255.0, 255/255.0, 0/255.0), (0/255.0, 102/255.0, 102/255.0)]
+    l = len(color_iter)
+    #print("Total colors = ",l)
+    c = 0
+    for node in G.nodes():
+        node_colors[node] = color_iter[c]
+        c += 1
+        if c >= l:
+            c = 0
+    #print("node_colors")
+    #print(node_colors)
+    return node_colors
+
 def topology(fname):
     G = nx.DiGraph()
+    try:
+        with open(fname, 'r') as file:
+            lines = file.readlines()
 
-    with open(fname, 'r') as file:
-        lines = file.readlines()
-        for line in lines:
-            print(line)
-            result_list = ast.literal_eval(line)
-            result_list = [item.rstrip('\n') for item in result_list]
-            if len(result_list) == 0:
-                continue
-            if len(result_list) == 1:
-                G.add_node(result_list[0])
-            for i in range(len(result_list)-1):
-                source = result_list[i]
-                dest = result_list[i+1]
-                if source == dest:
-                    continue
-                G.add_edge(source, dest)
+            for line in lines:
+                try:
+                    result_list = ast.literal_eval(line)
+                    result_list = [item.rstrip('\n') for item in result_list]
 
+                    if len(result_list) == 0:
+                        continue
+
+                    if len(result_list) == 1:
+                        G.add_node(result_list[0])
+
+                    for i in range(len(result_list) - 1):
+                        source = result_list[i]
+                        dest = result_list[i + 1]
+                        if source == dest:
+                            continue
+                        G.add_edge(source, dest)
+                except ValueError:
+                    print(f"Could not convert line {line} to list.")
+    except FileNotFoundError:
+        print("File not found.")
+        
     return G
 
 if __name__ == "__main__":
-
-
+    
     G = topology("routes.txt")
+    
+    dict_colors = get_colors(G)
 
-    # Visualize the graph
-    plt.figure(figsize=(100, 100))  # Increase figure size
-    pos = nx.spring_layout(G, seed=0, k=2) # k=distance between nodes
-    #pos = nx.drawing.nx_agraph.graphviz_layout(G, prog="neato")  # you can also try "dot", "twopi", "circo", etc.
-    nx.draw(G, pos, with_labels=True, node_size=1500, node_color='lightgreen', font_color="darkred", font_size=50, edge_color="grey", width=1)
+    edge_colors = list(dict_colors.values())
+
+    plt.figure(figsize=(50, 50))
+    pos = nx.spring_layout(G, seed=0, k=3, scale=5)
+    
+    nx.draw(G, pos, with_labels=False, node_size=1500, node_color=[(245/255.0, 250/255.0, 255/255.0)], edge_color=edge_colors, width=3, arrows=True, arrowsize=25)
+
+    for node, (x, y) in pos.items():
+        plt.text(x, y, node, fontsize=30, ha='center', va='center', color='black')
+        #plt.text(x, y, node, fontsize=30, ha='center', va='center', color=font_colors.get(node, 'black'))
+
     plt.title("Network Topology from Traceroute Data")
-    # Save the plot to a PNG file
-    image_path = f"1.png"
+    image_path = f"topology_final.png"
     plt.savefig(image_path, dpi=300)
     plt.close()
-    # Write the image reference to a Markdown file
-    with open(f"1.md", "w") as md_file:
+
+    with open(f"topology_final.md", "w") as md_file:
         md_file.write("# Building Network Topology\n")
         md_file.write(f"![Network Topology]({image_path})")
